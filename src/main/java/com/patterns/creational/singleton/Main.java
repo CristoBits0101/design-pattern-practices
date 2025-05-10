@@ -1,4 +1,6 @@
-package com.patrones.creacionales.singleton;
+package com.patterns.creational.singleton;
+
+import com.patterns.creational.singleton.models.Singleton;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +10,7 @@ public class Main {
          */
 
         // Step 1.1: Create a Singleton instance
-        Singleton singleton = new Singleton();
+        Singleton singleton = Singleton.getInstance();
 
         // Step 1.2: Set the counter value
         singleton.setContador(5);
@@ -24,7 +26,7 @@ public class Main {
          */
 
         // Step 2.1: Create another Singleton instance
-        Singleton singleton2 = new Singleton();
+        Singleton singleton2 = Singleton.getInstance();
 
         // Step 2.2: Set the counter value
         singleton2.setContador(10);
