@@ -1,7 +1,9 @@
 package com.patrones;
 
+import com.patrones.creacionales.singleton.Singleton;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Singleton singleton = new Singleton();
     }
 }
