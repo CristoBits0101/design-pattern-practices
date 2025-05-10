@@ -28,13 +28,10 @@ public class Main {
         // Step 2.1: Create another Singleton instance
         Singleton singleton2 = Singleton.getInstance();
 
-        // Step 2.2: Set the counter value
-        singleton2.setContador(10);
-
-        // Step 2.3: Get the counter value
+        // Step 2.2: Get the counter value
         System.out.println("Singleton2 Counter: " + singleton2.getContador());
 
-        // Step 2.4: Display Singleton2 instance information
+        // Step 2.3: Display Singleton2 instance information
         System.out.println("Singleton2 Instance: " + singleton2);
 
     }
