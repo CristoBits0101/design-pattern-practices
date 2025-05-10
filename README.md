@@ -12,4 +12,4 @@
 # PATRONES CREACIONALES
 
 - **Singleton:** Solo puede haber una instancia de una clase.
-- **Factory:** Sirve para crear una jerarquía de clases y utilizar una u otra de forma transparente.
+- **Factory:** Permite crear diferentes objetos según el parámetro que se le pase al constructor del factory.

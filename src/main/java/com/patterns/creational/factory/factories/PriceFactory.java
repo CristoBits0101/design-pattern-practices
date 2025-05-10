@@ -18,11 +18,11 @@ public class PriceFactory {
      * Constructors
      */
 
-    // Step 3.2: Prevent instantiation of empty constructor
+    // Step 3.3: Prevent instantiation of empty constructor
     private PriceFactory() {
     }
 
-    // Step 3.3: Create a constructor to get the Price object
+    // Step 3.4: Create a constructor to get the Price object
     public PriceFactory(String country) {
 
         price = switch (country.toUpperCase()) {
@@ -31,6 +31,15 @@ public class PriceFactory {
             default -> throw new IllegalArgumentException("Country not supported!");
         };
 
+    }
+
+    /**
+     * Methods
+     */
+    
+    // Step 3.5: Create a method to get the Price object
+    public double getPrice() {
+        return price.getPrice();
     }
 
 }
