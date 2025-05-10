@@ -12,3 +12,4 @@
 # PATRONES CREACIONALES
 
 - **Singleton:** Solo puede haber una instancia de una clase.
+- **Factory:** 
