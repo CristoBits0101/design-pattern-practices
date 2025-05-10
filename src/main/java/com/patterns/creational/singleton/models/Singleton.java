@@ -8,7 +8,7 @@ public class Singleton {
     public int contador = 0;
 
     // Step 1: Create a Singleton instance
-    private Singleton singleton;
+    private static Singleton singleton;
 
     /**
      * Constructors
@@ -24,7 +24,11 @@ public class Singleton {
 
     // Step 3: Create a public static method to get the Singleton instance
     public static Singleton getInstance() {
-        return new Singleton();
+        // Check if the instance is null and if so create a new instance
+        if (singleton == null) {
+            singleton = new Singleton();
+        }
+        return singleton;
     }
 
     /**
