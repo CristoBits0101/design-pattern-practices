@@ -5,6 +5,6 @@
 
 # TIPOS DE PATRONES DE DISEÑO
 
-- **Creacionales**: Se utilizan para encapsular y abstraer la creación de objetos.
-- **Estructurales**: Solucionan diseño de composición acoplando diferentes clases en una sola.
-- **Comportamiento**: Proveen soluciones de interacción y del comportamiento de la clase.
+- **Creacionales:** Se utilizan para encapsular y abstraer la creación de objetos.
+- **Estructurales:** Solucionan diseño de composición acoplando diferentes clases en una sola.
+- **Comportamiento:** Proveen soluciones de interacción y del comportamiento de la clase.
