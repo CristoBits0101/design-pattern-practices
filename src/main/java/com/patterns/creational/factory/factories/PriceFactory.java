@@ -19,6 +19,7 @@ public class PriceFactory {
      */
 
     // Step 3.3: Prevent instantiation of empty constructor
+    @SuppressWarnings("unused")
     private PriceFactory() {
     }
 
@@ -36,7 +37,7 @@ public class PriceFactory {
     /**
      * Methods
      */
-    
+
     // Step 3.5: Create a method to get the Price object
     public double getPrice() {
         return price.getPrice();
