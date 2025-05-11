@@ -8,7 +8,7 @@ public class Main {
 
         // 3.1: Create a PhoneServiceImpl object and call the Create method
         PhoneServiceImpl phoneService = new PhoneServiceImpl();
-        phoneService.Create();
+        phoneService.create();
 
     }
 
