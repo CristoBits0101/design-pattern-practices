@@ -20,4 +20,5 @@
 
 - **Decorator:** Añade funcionalidad a una clase sin modificarla.
 - **Adapter:** Convierte la interfaz de una clase para que sea compatible con otra usada en código legacy.
-- **Facade:** Oculta la lógica en una llamada.
+- **Facade:** Oculta la lógica de múltiples tareas de un código en una llamada.
+
