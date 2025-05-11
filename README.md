@@ -26,6 +26,6 @@
 
 - **Iterator:** En base a la creación de métodos permite recorrer datos sin saber como están almacenados.
 - **Observer:** Patrón OneToMany donde un objeto notifica cambios y los observadores reaccionan automáticamente.
-- **Mediator:** 
+- **Mediator:** Interfiere como mediador en la comunicación de diferentes clases.
 - **State:** 
 - **Strategy:** 
