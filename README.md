@@ -19,5 +19,5 @@
 # PATRONES ESTRUCTURALES
 
 - **Decorator:** Añade funcionalidad a una clase sin modificarla.
-- **Adapter:** Convierte la interfaz de una clase para que sea compatible con otra.
+- **Adapter:** Convierte la interfaz de una clase para que sea compatible con otra usada en código legacy.
 - **:** 
