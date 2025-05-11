@@ -1,6 +1,8 @@
 package com.patterns.structural.decorator;
 
+import com.patterns.structural.decorator.services.IPhoneServiceImpl;
 import com.patterns.structural.decorator.services.PhoneServiceImpl;
+import com.patterns.structural.decorator.services.SmartphoneServiceImpl;
 
 public class Main {
 
@@ -9,6 +11,14 @@ public class Main {
         // 3.1: Create a PhoneServiceImpl object and call the Create method
         PhoneServiceImpl phoneService = new PhoneServiceImpl();
         phoneService.create();
+
+        // 3.2: Create a SmartphoneServiceImpl object and call the Create method
+        SmartphoneServiceImpl smartphoneService = new SmartphoneServiceImpl(phoneService);
+        smartphoneService.create();
+
+        // 3.3: Create an iPhoneServiceImpl object and call the Create method
+        IPhoneServiceImpl iPhoneService = new IPhoneServiceImpl(phoneService);
+        iPhoneService.create();
 
     }
 
