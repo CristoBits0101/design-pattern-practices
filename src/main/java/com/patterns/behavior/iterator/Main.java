@@ -14,5 +14,16 @@ public class Main {
         user.create(new User("John Doe2", 18));
         user.create(new User("John Doe3", 18));
 
+        // Step 4.3: Iterate over the users
+        while (user.hasMore()) {
+            // Step 4.4: Get the next user
+            User u = user.next();
+            // Step 4.5: Print the user
+            System.out.println(u);
+        }
+
+        // Step 4.6: Reset the iterator
+        user.reset();
+
     }
 }

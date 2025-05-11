@@ -13,7 +13,7 @@ public class UsersImpl implements UserIterator {
      */
 
     // Step 3.2: Create a collection to store the users
-    // The type of the collection is indifferent
+    // The type of the collection is indifferent!
     private ArrayList<User> users = new ArrayList<User>();
 
     // Step 3.3: Create a variable to store the current position in the collection
