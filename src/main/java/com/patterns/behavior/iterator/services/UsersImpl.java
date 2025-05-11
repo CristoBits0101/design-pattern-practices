@@ -13,6 +13,7 @@ public class UsersImpl implements UserIterator {
      */
 
     // Step 3.2: Create a collection to store the users
+    // The type of the collection is indifferent
     private ArrayList<User> users = new ArrayList<User>();
 
     // Step 3.3: Create a variable to store the current position in the collection
@@ -45,6 +46,8 @@ public class UsersImpl implements UserIterator {
 
     @Override
     public void reset() {
+        // Step 3.9: Reset the position to the beginning of the collection
+        position = 0;
     }
 
 }
