@@ -6,6 +6,8 @@ public class LampServiceImpl implements PluggableService {
     /**
      * Attributes
      */
+    
+    // Step 2.2: Create an attribute called isOn
     private boolean isOn = false;
 
     /**
