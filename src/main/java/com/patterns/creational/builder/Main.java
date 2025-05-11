@@ -12,6 +12,9 @@ public class Main {
                 .setDoors(0)
                 .build();
 
+        // Step 3.2: Print the car details
+        System.out.println("Car brand: " + carBuilder.getBrand());
+
     }
 
 }
