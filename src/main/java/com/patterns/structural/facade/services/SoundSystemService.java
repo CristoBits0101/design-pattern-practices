@@ -1,13 +1,13 @@
 package com.patterns.structural.facade.services;
 
-// Step 1: Create the SoundSystem class
-public class SoundSystem {
+// Step 2.1: Create the SoundSystem class
+public class SoundSystemService {
 
     /**
      * Methods
      */
 
-    // Step 1.2: Create the turnOn and turnOff methods
+    // Step 2.2: Create the turnOn and turnOff methods
     public void turnOn() {
         System.out.println("Sound system is ON");
     }

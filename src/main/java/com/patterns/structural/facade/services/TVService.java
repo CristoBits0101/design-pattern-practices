@@ -1,13 +1,13 @@
 package com.patterns.structural.facade.services;
 
-// Step 1.1: Create the TV class
-public class TV {
+// Step 2.1: Create the TV class
+public class TVService {
 
     /**
      * Methods
      */
 
-    // Step 1.2: Create the turnOn and turnOff methods
+    // Step 2.2: Create the turnOn and turnOff methods
     public void turnOn() {
         System.out.println("TV is ON!");
     }
