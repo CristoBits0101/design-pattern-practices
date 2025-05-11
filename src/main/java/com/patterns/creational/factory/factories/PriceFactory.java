@@ -1,8 +1,8 @@
 package com.patterns.creational.factory.factories;
 
-import com.patterns.creational.factory.prices.Price;
-import com.patterns.creational.factory.prices.PriceEURImpl;
-import com.patterns.creational.factory.prices.PriceUSDImpl;
+import com.patterns.creational.factory.services.PriceService;
+import com.patterns.creational.factory.services.PriceServiceEURImpl;
+import com.patterns.creational.factory.services.PriceServiceUSDImpl;
 
 // Step 3.1: Create a factory class to generate the Price objects
 public class PriceFactory {
@@ -12,7 +12,7 @@ public class PriceFactory {
      */
 
     // Step 3.2: Create a private price object
-    Price price;
+    PriceService price;
 
     /**
      * Constructors
@@ -27,8 +27,8 @@ public class PriceFactory {
     public PriceFactory(String country) {
 
         price = switch (country.toUpperCase()) {
-            case "USA" -> new PriceUSDImpl();
-            case "EUROPE" -> new PriceEURImpl();
+            case "USA" -> new PriceServiceUSDImpl();
+            case "EUROPE" -> new PriceServiceEURImpl();
             default -> throw new IllegalArgumentException("Country not supported!");
         };
 
