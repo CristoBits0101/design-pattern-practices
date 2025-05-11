@@ -9,7 +9,7 @@ public class Motorbike implements Cloneable {
 
     public String brand;
     public String model;
-    public int wheels;
+    public int doors;
 
     /**
      * Constructors
