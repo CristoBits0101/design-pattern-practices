@@ -21,13 +21,11 @@ public class PowerAdapter implements PluggableService {
     @Override
     public void turnOn() {
         ledService.connected(220);
-        System.out.println("PowerAdapter: Led is turned on with 220 volts!");
     }
 
     @Override
     public void turnOff() {
         ledService.disconnect();
-        System.out.println("PowerAdapter: Led is turned off!");
     }
 
     @Override
