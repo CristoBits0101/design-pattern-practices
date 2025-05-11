@@ -20,6 +20,7 @@ public class Main {
             User u = user.next();
             // Step 4.5: Print the user
             System.out.println(u);
+            System.out.println(u.getName() + " - " + u.getAge());
         }
 
         // Step 4.6: Reset the iterator
