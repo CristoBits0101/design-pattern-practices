@@ -13,4 +13,4 @@
 
 - **Singleton:** Solo puede haber una instancia de una clase.
 - **Factory:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
-- **Builder:** 
+- **Builder:** Permite simplificar la creación de objetos complejos con muchos parámetros.
