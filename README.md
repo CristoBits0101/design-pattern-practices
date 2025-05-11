@@ -19,5 +19,5 @@
 # PATRONES ESTRUCTURALES
 
 - **Decorator:** Añade funcionalidad a una clase sin modificarla.
-- **:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
-- **:** Permite simplificar la creación de objetos en constructores largos a través de métodos.
+- **Adapter:** Convierte la interfaz de una clase para que sea compatible con otra.
+- **:** 
