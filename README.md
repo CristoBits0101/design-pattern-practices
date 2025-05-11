@@ -15,3 +15,9 @@
 - **Factory:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
 - **Builder:** Permite simplificar la creación de objetos en constructores largos a través de métodos.
 - **Prototype:** Permite que una clase se clone a sí misma y a su estado.
+
+# PATRONES ESTRUCTURALES
+
+- **Decorator:** Añade funcionalidad a una clase sin modificarla.
+- **:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
+- **:** Permite simplificar la creación de objetos en constructores largos a través de métodos.
