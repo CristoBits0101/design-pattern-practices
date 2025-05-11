@@ -7,7 +7,7 @@
 
 - **Creacionales:** Se utilizan para encapsular y abstraer la creación de objetos.
 - **Estructurales:** Solucionan diseño de composición acoplando diferentes clases en una sola.
-- **Comportamiento:** Proveen soluciones de interacción y del comportamiento de la clase.
+- **Comportamiento:** Se ocupan de la comunicación entre diferentes objetos.
 
 # PATRONES CREACIONALES
 
@@ -22,3 +22,10 @@
 - **Adapter:** Convierte la interfaz de una clase para que sea compatible con otra usada en código legacy.
 - **Facade:** Oculta la lógica de múltiples tareas de un código en una llamada.
 
+# PATRONES DE COMPORTAMIENTO
+
+- **Iterator:** En base a la creación de métodos permite recorrer datos sin saber como están almacenados.
+- **Observer:** 
+- **Mediator:** 
+- **State:** 
+- **Strategy:** 
