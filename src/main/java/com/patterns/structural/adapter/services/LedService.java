@@ -16,19 +16,19 @@ public class LedService {
      */
 
     // Step 2.3: Implement the methods
-    public void turnOn(int voltaje) {
+    public void connected(int voltaje) {
         poweredOn = true;
         this.voltaje = voltaje;
         System.out.println("Led is turned on with " + voltaje + " volts!");
     }
 
-    public void turnOff() {
+    public void disconnect() {
         poweredOn = false;
         voltaje = 0;
         System.out.println("Led is turned off!");
     }
 
-    public boolean isOn() {
+    public boolean isConnected() {
         return poweredOn;
     }
 
