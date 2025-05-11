@@ -17,7 +17,9 @@ public class Main {
         smartphoneService.create();
 
         // 3.3: Create an iPhoneServiceImpl object and call the method in the second way
-        IPhoneServiceImpl iPhoneService = new IPhoneServiceImpl(new SmartphoneServiceImpl(new PhoneServiceImpl()));
+        IPhoneServiceImpl iPhoneService = new IPhoneServiceImpl(
+                new SmartphoneServiceImpl(
+                        new PhoneServiceImpl()));
         iPhoneService.create();
 
     }
