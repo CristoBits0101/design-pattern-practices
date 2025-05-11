@@ -17,7 +17,7 @@ public class PhoneDecorator implements PhoneService {
      */
 
     // Step 4.3: Create a constructor that takes the interface as a parameter
-    PhoneDecorator(PhoneService phoneService) {
+    protected PhoneDecorator(PhoneService phoneService) {
         // Step 4.4: Modify the interface to use the PhoneService object
         this.phoneService = phoneService;
     }
