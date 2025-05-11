@@ -14,4 +14,4 @@
 - **Singleton:** Solo puede haber una instancia de una clase.
 - **Factory:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
 - **Builder:** Permite simplificar la creación de objetos en constructores largos a través de métodos.
-- **Prototype:** Permite que una clase se clone a sí misma.
+- **Prototype:** Permite que una clase se clone a sí misma y a su estado.
