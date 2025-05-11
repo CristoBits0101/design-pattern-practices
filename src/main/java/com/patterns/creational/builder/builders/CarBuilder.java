@@ -19,17 +19,18 @@ public class CarBuilder {
     // Step 2.3: Create a constructor that initializes the required attribute
     public CarBuilder(String brand) {
         vehicle = new Vehicle();
-        vehicle.setBrand(brand);
+        vehicle.brand = brand;
     }
 
     /**
-     * Methods
+     * Methods: Can be added infinitely
      */
 
     // Step 2.4: Create a method that configures the vehicle doors
     public CarBuilder setDoors(int doors) {
         // This: It can be omitted if there is no equal name
-        vehicle.setDoors(doors);
+        // Call the vehicle attribute for initialization
+        vehicle.doors = doors;
         // Returns an instance of the class itself
         // This is known as fluid programming
         return this;
