@@ -17,12 +17,14 @@ public class OvenServiceImpl implements PluggableService {
     // Step 2.3: Implement the methods
     @Override
     public void turnOn() {
-
+        isOn = true;
+        System.out.println("Oven is turned on!");
     }
 
     @Override
     public void turnOff() {
-
+        isOn = false;
+        System.out.println("Oven is turned off!");
     }
 
     @Override

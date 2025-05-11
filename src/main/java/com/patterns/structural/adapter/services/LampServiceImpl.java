@@ -6,7 +6,7 @@ public class LampServiceImpl implements PluggableService {
     /**
      * Attributes
      */
-    boolean isOn = false;
+    private boolean isOn = false;
 
     /**
      * Methods
@@ -16,13 +16,13 @@ public class LampServiceImpl implements PluggableService {
     @Override
     public void turnOn() {
         isOn = true;
-        System.out.println("Lamp is turned on");
+        System.out.println("Lamp is turned on!");
     }
 
     @Override
     public void turnOff() {
         isOn = false;
-        System.out.println("Lamp is turned off");
+        System.out.println("Lamp is turned off!");
     }
 
     @Override
