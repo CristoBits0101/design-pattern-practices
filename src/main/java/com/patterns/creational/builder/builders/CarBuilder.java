@@ -35,7 +35,7 @@ public class CarBuilder {
         return this;
     }
 
-    // Step 2.5: 
+    // Step 2.5: Return the vehicle object
     public Vehicle build() {
         return vehicle;
     }
