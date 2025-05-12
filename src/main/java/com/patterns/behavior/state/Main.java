@@ -10,7 +10,8 @@ public class Main {
 
         // Step 6.2: Create the phone starting in locked state
         Phone phone = new Phone(new LockedStatus(null));
-        phone.setState(new LockedStatus(phone)); // pass phone reference after init
+        // Pass phone reference after init
+        phone.setState(new LockedStatus(phone));
 
         // Step 6.3: Try to use the phone in various states
         System.out.println("=== Trying to open camera while locked ===");
@@ -26,7 +27,8 @@ public class Main {
         phone.takePhoto();
 
         System.out.println("\n=== Taking another photo ===");
-        phone.takePhoto(); // this should return to UnlockedStatus
-        
+        // This should return to UnlockedStatus
+        phone.takePhoto();
+
     }
 }

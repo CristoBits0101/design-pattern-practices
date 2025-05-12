@@ -18,23 +18,23 @@ public class LockedStatus extends StateService {
      * Methods
      */
 
-    // Step 3.2: Implement the unlockPhone method
+    // Step 3.3: Implement the unlockPhone method
     @Override
     public void unlockPhone() {
         System.out.println("Unlocking phone...");
         phone.setState(new UnlockedStatus(phone));
     }
 
-    // Step 3.3: Implement the openCamera method
+    // Step 3.4: Implement the openCamera method
     @Override
     public void openCamera() {
         System.out.println("You need to unlock the phone first.");
     }
 
-    // Step 3.4: Implement the takePhoto method
+    // Step 3.5: Implement the takePhoto method
     @Override
     public void takePhoto() {
         System.out.println("You need to unlock the phone first.");
     }
-    
+
 }
