@@ -25,7 +25,7 @@
 # PATRONES DE COMPORTAMIENTO
 
 - **Iterator:** En base a la creación de métodos permite recorrer datos sin saber como están almacenados.
-- **Observer:** Patrón OneToMany donde un objeto notifica cambios y los observadores reaccionan automáticamente.
+- **Observer:** Un objeto notifica cambios y los observadores reaccionan.
 - **Mediator:** Interfiere como mediador en la comunicación de diferentes clases.
 -    **State:** Se utiliza para crear flujos de trabajos, donde una acción está limitada a otra.
 - **Strategy:** 
