@@ -28,4 +28,4 @@
 - **Observer:** Un objeto notifica cambios y los observadores reaccionan.
 - **Mediator:** Interfiere como mediador en la comunicación de diferentes clases.
 -    **State:** Se utiliza para crear flujos de trabajos, donde una acción está limitada a otra.
-- **Strategy:** 
+- **Strategy:** Crea un envoltorio sobre varias funciones su aplicación podría ser en un carrito de la compra.

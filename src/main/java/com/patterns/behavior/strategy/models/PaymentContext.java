@@ -1,0 +1,37 @@
+package com.patterns.behavior.strategy.models;
+
+import com.patterns.behavior.strategy.services.PaymentStrategy;
+
+// Step 3.1: Create a context class
+public class PaymentContext {
+
+    /**
+     * Attributes
+     */
+
+    // Step 3.2: Reference to a strategy
+    private PaymentStrategy strategy;
+
+    /**
+     * Constructors
+     */
+
+    // Step 3.3: Create a constructor with strategy
+    public PaymentContext(PaymentStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    /**
+     * Methods
+     */
+
+    // Step 3.4: Set strategy at runtime
+    public void setStrategy(PaymentStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    // Step 3.5: Execute payment
+    public void executePayment(double amount) {
+        strategy.pay(amount);
+    }
+}
