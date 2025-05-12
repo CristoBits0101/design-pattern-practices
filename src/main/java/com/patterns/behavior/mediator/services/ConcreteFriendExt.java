@@ -31,6 +31,7 @@ public class ConcreteFriendExt extends Friend {
     // Step 4.3: Create a method to receive messages
     @Override
     public void receiveMessage() {
+        // Object that receives the message
         System.out.println(name + " received a message!");
     }
 
