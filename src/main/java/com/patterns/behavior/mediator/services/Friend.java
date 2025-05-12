@@ -18,6 +18,7 @@ public abstract class Friend {
 
     // Step 2.3: Create a method to set the mediator
     public void setMediator(Mediator mediator) {
+        // Inherited attribute
         this.mediator = mediator;
     }
 

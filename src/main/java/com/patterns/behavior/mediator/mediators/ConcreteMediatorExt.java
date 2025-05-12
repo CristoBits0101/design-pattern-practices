@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import com.patterns.behavior.mediator.services.Friend;
 
 // Step 3.1: Create a concrete class for Mediator
-public class ConcreteMediator extends Mediator {
+public class ConcreteMediatorExt extends Mediator {
 
     /**
      * Attributes

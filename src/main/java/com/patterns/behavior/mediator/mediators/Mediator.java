@@ -14,4 +14,5 @@ public abstract class Mediator {
 
     // Step 1.3: Create an abstract method to resend messages
     public abstract void resendMessage(Friend friend);
+
 }

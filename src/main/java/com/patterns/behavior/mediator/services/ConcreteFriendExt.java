@@ -1,7 +1,7 @@
 package com.patterns.behavior.mediator.services;
 
 // Step 4.1: Create a concrete class for Friend
-public class ConcreteFriend extends Friend {
+public class ConcreteFriendExt extends Friend {
 
     /**
      * Attributes
@@ -13,7 +13,7 @@ public class ConcreteFriend extends Friend {
      * Constructors
      */
 
-    public ConcreteFriend(String name) {
+    public ConcreteFriendExt(String name) {
         this.name = name;
     }
 
