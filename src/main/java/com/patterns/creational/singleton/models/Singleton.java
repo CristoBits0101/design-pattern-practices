@@ -27,8 +27,7 @@ public class Singleton {
         // Check if the instance is null and if so create a new instance
         // Always returns the singleton attribute that is the instance of the Singleton
         // class
-        // Although the constructor is private, it can be accessed from the class
-        // itself.
+        // Although the constructor is private, it can be accessed from the class itself.
         return (singleton == null) ? (singleton = new Singleton()) : singleton;
     }
 
