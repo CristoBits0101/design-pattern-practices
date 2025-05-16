@@ -25,6 +25,7 @@ public class Singleton {
     // Step 3: Create a public static method to get the Singleton instance
     public static Singleton getInstance() {
         // Check if the instance is null and if so create a new instance
+        // Always returns the singleton attribute that is the instance of the Singleton class
         return (singleton == null) ? (singleton = new Singleton()) : singleton;
     }
 
