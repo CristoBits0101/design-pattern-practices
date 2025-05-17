@@ -1,8 +1,8 @@
 package com.patterns.structural.decorator;
 
-import com.patterns.structural.decorator.services.implementations.IPhoneServiceImpl;
 import com.patterns.structural.decorator.services.implementations.PhoneServiceImpl;
-import com.patterns.structural.decorator.services.implementations.SmartphoneServiceImpl;
+import com.patterns.structural.decorator.services.implementations.decorated.IPhoneServiceImpl;
+import com.patterns.structural.decorator.services.implementations.decorated.SmartphoneServiceImpl;
 
 public class Main {
 
