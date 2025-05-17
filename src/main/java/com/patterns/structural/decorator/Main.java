@@ -8,19 +8,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 5.1: Create a PhoneServiceImpl object and call the Create method
+        // 5.1: Create a basic phone and show functionality
         PhoneServiceImpl phoneService = new PhoneServiceImpl();
-        phoneService.create();
+        phoneService.showFunctionality();
 
-        // 5.2: Create a SmartphoneServiceImpl object and call the Create method
+        // 5.2: Create a Smartphone and show functionality
         SmartphoneServiceImpl smartphoneService = new SmartphoneServiceImpl(phoneService);
-        smartphoneService.create();
+        smartphoneService.showFunctionality();
 
-        // 5.3: Create an iPhoneServiceImpl object and call the method in the second way
+        // 5.3: Create an iPhone and show functionality
         IPhoneServiceImpl iPhoneService = new IPhoneServiceImpl(
                 new SmartphoneServiceImpl(
                         new PhoneServiceImpl()));
-        iPhoneService.create();
+        iPhoneService.showFunctionality();
 
     }
 

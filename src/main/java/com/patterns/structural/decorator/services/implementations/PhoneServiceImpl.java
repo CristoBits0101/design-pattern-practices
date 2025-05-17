@@ -9,7 +9,7 @@ public class PhoneServiceImpl implements PhoneService {
 
     // Step 2.2: Implement the interface
     @Override
-    public void create() {
+    public void showFunctionality() {
 
         System.out.println("Creating a basic phone service");
 

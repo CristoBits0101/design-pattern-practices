@@ -21,8 +21,8 @@ public class SmartphoneServiceImpl extends PhoneDecorator {
 
     // Step 4.3: Override the create method to add new functionality
     @Override
-    public void create() {
-        super.create();
+    public void showFunctionality() {
+        super.showFunctionality();
         itHaveCamera();
         itHaveGPS();
     }

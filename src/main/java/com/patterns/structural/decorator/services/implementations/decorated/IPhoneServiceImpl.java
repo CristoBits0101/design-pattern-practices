@@ -21,10 +21,10 @@ public class IPhoneServiceImpl extends PhoneDecorator {
 
     // Step 4.3: Implement the create method
     @Override
-    public void create() {
+    public void showFunctionality() {
 
         // Step 4.4: Call the parent method to maintain the original functionality
-        super.create();
+        super.showFunctionality();
 
         // Step 4.5: Add additional functionality specific to iPhone
         itHaveFaceID();
