@@ -25,6 +25,7 @@ public class ConcreteFriendExt extends Friend {
     @Override
     public void sendMessage() {
         System.out.println("I'm " + name + " and sent a message!");
+        // Call the concrete mediator to send the message
         mediator.resendMessage(this);
     }
 
