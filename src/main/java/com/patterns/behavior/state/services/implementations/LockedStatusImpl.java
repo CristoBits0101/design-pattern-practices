@@ -1,16 +1,17 @@
-package com.patterns.behavior.state.services;
+package com.patterns.behavior.state.services.implementations;
 
 import com.patterns.behavior.state.models.Phone;
+import com.patterns.behavior.state.services.StateService;
 
 // Step 3.1: Create a class that extends StateService
-public class LockedStatus extends StateService {
+public class LockedStatusImpl extends StateService {
 
     /**
      * Constructors
      */
 
     // Step 3.2: Create a constructor that takes a Phone object
-    public LockedStatus(Phone phone) {
+    public LockedStatusImpl(Phone phone) {
         super(phone);
     }
 
@@ -22,7 +23,7 @@ public class LockedStatus extends StateService {
     @Override
     public void unlockPhone() {
         System.out.println("Unlocking phone...");
-        phone.setState(new UnlockedStatus(phone));
+        phone.setState(new UnlockedStatusImpl(phone));
     }
 
     // Step 3.4: Implement the openCamera method
