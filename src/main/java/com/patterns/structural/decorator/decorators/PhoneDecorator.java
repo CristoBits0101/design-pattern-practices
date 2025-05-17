@@ -18,7 +18,7 @@ public class PhoneDecorator implements PhoneService {
 
     // Step 3.3: Create a constructor that takes the interface as a parameter
     protected PhoneDecorator(PhoneService phoneService) {
-        // Step 3.4: Modify the interface to use the PhoneService object
+        // Step 3.4: Initializes the interface to reference an implementation
         this.phoneService = phoneService;
     }
 
@@ -26,7 +26,7 @@ public class PhoneDecorator implements PhoneService {
      * Methods
      */
 
-    // Step 3.5: Implements interface and call the method of the PhoneService object
+    // Step 3.5: showFunctionality calls the showFunctionality of the implementation
     @Override
     public void showFunctionality() {
         this.phoneService.showFunctionality();
