@@ -14,7 +14,7 @@
 - **Singleton:** Limita a una única instancia de la clase en memoria.
 -   **Factory:** Permite instanciar distintos objetos desde una clase Factory.
 -   **Builder:** Simplifica la creación de objetos mediante métodos y no largos constructores.
-- **Prototype:** Permite que una clase se clone a sí misma y a su estado.
+- **Prototype:** Permite que una clase clone su estado para no tener que crear una nueva y copiar los valores.
 
 # PATRONES ESTRUCTURALES
 
