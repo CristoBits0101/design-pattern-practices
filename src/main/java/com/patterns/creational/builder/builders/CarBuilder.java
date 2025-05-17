@@ -31,7 +31,8 @@ public class CarBuilder {
         // This: It can be omitted if there is no equal name
         // Call the vehicle attribute for initialization
         vehicle.doors = doors;
-        // Returns an instance of the class itself
+        // Each time the instance itself is returned, it allows you to initialize one more attribute
+        // Create a new instance with the same reference -> new CarBuilder(brand) -> new CarBuilder(this)
         // This is known as fluid programming
         return this;
     }
