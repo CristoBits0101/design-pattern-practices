@@ -26,7 +26,7 @@ public class PhoneDecorator implements PhoneService {
      * Methods
      */
 
-    // Step 3.5: Create a PhoneService object
+    // Step 3.5: Implements interface and call the method of the PhoneService object
     @Override
     public void create() {
         this.phoneService.create();
