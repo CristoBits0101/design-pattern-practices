@@ -1,4 +1,4 @@
-package com.patterns.structural.decorator.services;
+package com.patterns.structural.decorator.services.implementations;
 
 import com.patterns.structural.decorator.decorators.PhoneDecorator;
 
