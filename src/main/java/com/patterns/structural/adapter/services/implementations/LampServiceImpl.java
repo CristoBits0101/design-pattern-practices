@@ -1,4 +1,6 @@
-package com.patterns.structural.adapter.services;
+package com.patterns.structural.adapter.services.implementations;
+
+import com.patterns.structural.adapter.services.PluggableService;
 
 // Step 2.1: Create a class called LampServiceImpl that implements the PluggableService interface
 public class LampServiceImpl implements PluggableService {

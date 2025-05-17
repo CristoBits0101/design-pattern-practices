@@ -1,4 +1,4 @@
-package com.patterns.structural.adapter.services;
+package com.patterns.structural.adapter.models;
 
 // Step 2.1: Create a class called LedService
 public class LedService {

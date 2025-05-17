@@ -1,9 +1,9 @@
 package com.patterns.structural.adapter;
 
 import com.patterns.structural.adapter.adapters.PowerAdapter;
-import com.patterns.structural.adapter.services.LampServiceImpl;
-import com.patterns.structural.adapter.services.OvenServiceImpl;
 import com.patterns.structural.adapter.services.PluggableService;
+import com.patterns.structural.adapter.services.implementations.LampServiceImpl;
+import com.patterns.structural.adapter.services.implementations.OvenServiceImpl;
 
 public class Main {
 

@@ -1,6 +1,6 @@
 package com.patterns.structural.adapter.adapters;
 
-import com.patterns.structural.adapter.services.LedService;
+import com.patterns.structural.adapter.models.LedService;
 import com.patterns.structural.adapter.services.PluggableService;
 
 // Step 3.1: Create a class called PowerAdapter that implements the PluggableService interface
