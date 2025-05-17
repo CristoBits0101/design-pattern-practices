@@ -26,6 +26,7 @@ public class Phone {
      */
 
     // Step 2.4: Create a method to set the state
+    // Call to the method of the current object instead of the state
     public void setState(StateService state) {
         this.state = state;
     }

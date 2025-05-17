@@ -25,6 +25,7 @@ public class UnlockedStatusImpl extends StateService {
     }
 
     // Step 3.3: Implement the openCamera method
+    // Pass the new state to the phone
     @Override
     public void openCamera() {
         System.out.println("Opening camera...");

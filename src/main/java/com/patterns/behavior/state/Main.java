@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Step 6.2: Create the phone starting in locked state
+        // Pass as state the LockedStatusImpl class
         Phone phone = new Phone(new LockedStatusImpl(null));
         
         // Pass phone reference after init
