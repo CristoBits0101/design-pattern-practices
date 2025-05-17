@@ -11,9 +11,6 @@ public class Main {
         // Step 6.2: Create the phone starting in locked state
         // Pass as state the LockedStatusImpl class
         Phone phone = new Phone(new LockedStatusImpl(null));
-        
-        // Pass phone reference after init
-        phone.setState(new LockedStatusImpl(phone));
 
         // Step 6.3: Try to use the phone in various states
         System.out.println("=== Trying to open camera while locked ===");
