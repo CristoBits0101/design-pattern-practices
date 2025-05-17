@@ -1,6 +1,6 @@
 package com.patterns.structural.adapter;
 
-import com.patterns.structural.adapter.adapters.PowerAdapter;
+import com.patterns.structural.adapter.adapters.LedAdapter;
 import com.patterns.structural.adapter.services.PluggableService;
 import com.patterns.structural.adapter.services.implementations.LampServiceImpl;
 import com.patterns.structural.adapter.services.implementations.OvenServiceImpl;
@@ -12,7 +12,7 @@ public class Main {
         // Step 4.1: Instantiate the classes
         OvenServiceImpl ovenService = new OvenServiceImpl();
         LampServiceImpl lampService = new LampServiceImpl();
-        PowerAdapter powerAdapter = new PowerAdapter();
+        LedAdapter powerAdapter = new LedAdapter();
 
         // Step 4.3: Call the methods
         turnOn(ovenService);
