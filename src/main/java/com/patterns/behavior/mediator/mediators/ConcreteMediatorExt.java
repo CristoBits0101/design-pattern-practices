@@ -19,7 +19,7 @@ public class ConcreteMediatorExt extends Mediator {
 
     // Step 3.3: Create a method to register friends
     @Override
-    public void registerMessage(Friend friend) {
+    public void registerFriend(Friend friend) {
         if (!friends.contains(friend)) {
             // Add the friend to the list
             friends.add(friend);

@@ -10,7 +10,7 @@ public abstract class Mediator {
      */
 
     // Step 1.2: Create an abstract method to register friends
-    public abstract void registerMessage(Friend friend);
+    public abstract void registerFriend(Friend friend);
 
     // Step 1.3: Create an abstract method to resend messages
     public abstract void resendMessage(Friend friend);

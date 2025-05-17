@@ -15,9 +15,9 @@ public class Main {
         ConcreteFriendExt concreteFriend3 = new ConcreteFriendExt("Charlie");
 
         // Step 5.2: Register friends to concrete mediator
-        concreteMediator.registerMessage(concreteFriend1);
-        concreteMediator.registerMessage(concreteFriend2);
-        concreteMediator.registerMessage(concreteFriend3);
+        concreteMediator.registerFriend(concreteFriend1);
+        concreteMediator.registerFriend(concreteFriend2);
+        concreteMediator.registerFriend(concreteFriend3);
 
         // Step 5.3: Send a message from one friend
         concreteFriend1.sendMessage();
