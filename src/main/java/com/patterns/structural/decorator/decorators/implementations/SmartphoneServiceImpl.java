@@ -3,14 +3,14 @@ package com.patterns.structural.decorator.decorators.implementations;
 import com.patterns.structural.decorator.decorators.PhoneDecorator;
 import com.patterns.structural.decorator.services.PhoneService;
 
-// Step 5.1: Create a class that implements the PhoneDecorator
+// Step 4.1: Create a class that implements the PhoneDecorator
 public class SmartphoneServiceImpl extends PhoneDecorator {
 
     /**
      * Constructors
      */
 
-    // Step 5.2: The class constructor invokes the parent constructor
+    // Step 4.2: The class constructor invokes the parent constructor
     public SmartphoneServiceImpl(PhoneService phoneService) {
         super(phoneService);
     }
@@ -19,7 +19,7 @@ public class SmartphoneServiceImpl extends PhoneDecorator {
      * Methods
      */
 
-    // Step 5.3: Override the create method to add new functionality
+    // Step 4.3: Override the create method to add new functionality
     @Override
     public void create() {
         super.create();
@@ -27,7 +27,7 @@ public class SmartphoneServiceImpl extends PhoneDecorator {
         itHaveGPS();
     }
 
-    // Step 5.4: Add any additional methods or properties if needed
+    // Step 4.4: Add any additional methods or properties if needed
     private void itHaveCamera() {
         System.out.println("¡Tengo cámara!");
     }
