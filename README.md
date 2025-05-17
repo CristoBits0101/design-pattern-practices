@@ -11,9 +11,9 @@
 
 # PATRONES CREACIONALES
 
-- **Singleton:** Solo puede haber una instancia de una clase.
--   **Factory:** Permite crear distintos objetos según el parámetro del constructor, ocultando la lógica de creación.
--   **Builder:** Permite simplificar la creación de objetos en constructores largos a través de métodos.
+- **Singleton:** Limita a una única instancia de la clase en memoria.
+-   **Factory:** Permite instanciar distintos objetos desde una clase Factory.
+-   **Builder:** Simplifica la creación de objetos mediante métodos y no largos constructores.
 - **Prototype:** Permite que una clase se clone a sí misma y a su estado.
 
 # PATRONES ESTRUCTURALES
