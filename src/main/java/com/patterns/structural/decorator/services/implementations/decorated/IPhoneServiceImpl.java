@@ -11,6 +11,7 @@ public class IPhoneServiceImpl extends PhoneDecorator {
      */
 
     // Step 4.2: The class constructor invokes the parent constructor
+    // Pass the basic phone object to the parent constructor
     public IPhoneServiceImpl(PhoneService phoneService) {
         super(phoneService);
     }
@@ -24,6 +25,7 @@ public class IPhoneServiceImpl extends PhoneDecorator {
     public void showFunctionality() {
 
         // Step 4.4: Call the parent method to maintain the original functionality
+        // This will call the showFunctionality method of the PhoneDecorator and call to basic showFunctionality
         super.showFunctionality();
 
         // Step 4.5: Add additional functionality specific to iPhone
