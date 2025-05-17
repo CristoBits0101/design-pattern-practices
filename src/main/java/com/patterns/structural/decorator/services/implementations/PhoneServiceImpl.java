@@ -1,6 +1,6 @@
 package com.patterns.structural.decorator.services.implementations;
 
-import com.patterns.structural.decorator.services.interfaces.PhoneService;
+import com.patterns.structural.decorator.services.PhoneService;
 
 // Step 2.1: Create a class that implements the PhoneService interface
 public class PhoneServiceImpl implements PhoneService {
