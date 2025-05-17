@@ -1,4 +1,6 @@
-package com.patterns.behavior.observer.receivers;
+package com.patterns.behavior.observer.receivers.implementations;
+
+import com.patterns.behavior.observer.receivers.Receptor;
 
 // Step 3.1: Create an receiver class that implements the Receptor interface
 public class TVReceiverImpl implements Receptor {

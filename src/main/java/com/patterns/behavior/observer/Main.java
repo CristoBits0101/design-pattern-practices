@@ -1,8 +1,8 @@
 package com.patterns.behavior.observer;
 
 import com.patterns.behavior.observer.emitters.Station;
-import com.patterns.behavior.observer.receivers.SatelliteReceiverImpl;
-import com.patterns.behavior.observer.receivers.TVReceiverImpl;
+import com.patterns.behavior.observer.receivers.implementations.SatelliteReceiverImpl;
+import com.patterns.behavior.observer.receivers.implementations.TVReceiverImpl;
 
 public class Main {
     public static void main(String[] args) {
