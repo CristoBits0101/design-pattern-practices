@@ -33,6 +33,7 @@ public class CarBuilder {
         vehicle.doors = doors;
         // Each time the instance itself is returned, it allows you to initialize one more attribute
         // Create a new instance with the same reference -> new CarBuilder(brand) -> new CarBuilder(this)
+        // Everything is saved in the same variable
         // This is known as fluid programming
         return this;
     }
