@@ -1,8 +1,8 @@
 package com.patterns.behavior.strategy;
 
 import com.patterns.behavior.strategy.models.PaymentContext;
-import com.patterns.behavior.strategy.services.CreditCardPayment;
-import com.patterns.behavior.strategy.services.PayPalPayment;
+import com.patterns.behavior.strategy.services.implementations.CreditCardPayment;
+import com.patterns.behavior.strategy.services.implementations.PayPalPayment;
 
 // Step 4.1: Create a main class to test the Strategy pattern
 public class Main {

@@ -25,12 +25,12 @@ public class PaymentContext {
      * Methods
      */
 
-    // Step 3.4: Set strategy at runtime
+    // Step 3.4: Polimorphic method to set the pay strategy
     public void setStrategy(PaymentStrategy strategy) {
         this.strategy = strategy;
     }
 
-    // Step 3.5: Execute payment
+    // Step 3.5: Execute payment method
     public void executePayment(double amount) {
         strategy.pay(amount);
     }

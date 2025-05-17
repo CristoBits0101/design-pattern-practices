@@ -1,4 +1,6 @@
-package com.patterns.behavior.strategy.services;
+package com.patterns.behavior.strategy.services.implementations;
+
+import com.patterns.behavior.strategy.services.PaymentStrategy;
 
 // Step 2.1: Create a class that implements PaymentStrategy
 public class CreditCardPayment implements PaymentStrategy {
