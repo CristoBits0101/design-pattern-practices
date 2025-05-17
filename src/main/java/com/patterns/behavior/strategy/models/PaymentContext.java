@@ -16,7 +16,7 @@ public class PaymentContext {
      * Constructors
      */
 
-    // Step 3.3: Create a constructor with strategy
+    // Step 3.3: Create a constructor with strategy initial
     public PaymentContext(PaymentStrategy strategy) {
         this.strategy = strategy;
     }
