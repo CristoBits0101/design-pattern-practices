@@ -14,7 +14,7 @@ public class Main {
         ConcreteFriendExt concreteFriend2 = new ConcreteFriendExt("Bob");
         ConcreteFriendExt concreteFriend3 = new ConcreteFriendExt("Charlie");
 
-        // Step 5.2: Register friends to mediator
+        // Step 5.2: Register friends to concrete mediator
         concreteMediator.registerMessage(concreteFriend1);
         concreteMediator.registerMessage(concreteFriend2);
         concreteMediator.registerMessage(concreteFriend3);
