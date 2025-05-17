@@ -10,6 +10,7 @@ public class Main {
 
         // Step 6.2: Create the phone starting in locked state
         Phone phone = new Phone(new LockedStatusImpl(null));
+        
         // Pass phone reference after init
         phone.setState(new LockedStatusImpl(phone));
 
