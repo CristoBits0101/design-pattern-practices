@@ -2,16 +2,21 @@ package com.patterns.behavior.strategy.services;
 
 import java.util.ArrayList;
 
-public class UsuariosMemoria {
+/**
+ * La función de esta clase es almacenar los usuarios y devolverlos
+ */
+public class UsuariosMemoriaImpl implements Usuarios {
 
     private ArrayList<String> usuarios = new ArrayList<>();
 
+    @Override
     public void crear(String nombre) {
         usuarios.add(nombre);
         System.out.println("Usuario " + nombre + " creado.");
     }
 
-    public ArrayList<String> listar(String nombre) {
+    @Override
+    public ArrayList<String> listar() {
         return usuarios;
     }
 
