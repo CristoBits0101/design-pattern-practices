@@ -1,6 +1,6 @@
 package com.patterns.behavior.visitor.models;
 
-import com.patterns.behavior.visitor.services.PaymentStrategy;
+import com.patterns.behavior.visitor.services.PaymentVisitor;
 
 // Step 3.1: Create a context class
 public class PaymentContext {
@@ -10,14 +10,14 @@ public class PaymentContext {
      */
 
     // Step 3.2: Reference to a strategy
-    private PaymentStrategy strategy;
+    private PaymentVisitor strategy;
 
     /**
      * Constructors
      */
 
     // Step 3.3: Create a constructor with strategy initial
-    public PaymentContext(PaymentStrategy strategy) {
+    public PaymentContext(PaymentVisitor strategy) {
         this.strategy = strategy;
     }
 
@@ -26,7 +26,7 @@ public class PaymentContext {
      */
 
     // Step 3.4: Polimorphic method to set the pay strategy
-    public void setStrategy(PaymentStrategy strategy) {
+    public void setStrategy(PaymentVisitor strategy) {
         this.strategy = strategy;
     }
 

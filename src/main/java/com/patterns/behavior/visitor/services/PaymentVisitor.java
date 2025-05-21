@@ -1,7 +1,7 @@
 package com.patterns.behavior.visitor.services;
 
 // Step 1.1: Create a strategy interface
-public interface PaymentStrategy {
+public interface PaymentVisitor {
 
     /**
      * Methods

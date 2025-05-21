@@ -1,9 +1,9 @@
 package com.patterns.behavior.visitor.services.implementations;
 
-import com.patterns.behavior.visitor.services.PaymentStrategy;
+import com.patterns.behavior.visitor.services.PaymentVisitor;
 
 // Step 2.1: Create a class that implements PaymentStrategy
-public class PayPalPayment implements PaymentStrategy {
+public class PayPalPayment implements PaymentVisitor {
 
     /**
      * Methods
