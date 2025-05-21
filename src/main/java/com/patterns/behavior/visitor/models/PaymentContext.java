@@ -1,6 +1,6 @@
-package com.patterns.behavior.strategy.models;
+package com.patterns.behavior.visitor.models;
 
-import com.patterns.behavior.strategy.services.PaymentStrategy;
+import com.patterns.behavior.visitor.services.PaymentStrategy;
 
 // Step 3.1: Create a context class
 public class PaymentContext {
