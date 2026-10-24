@@ -17,21 +17,21 @@ public class Main {
 
         System.out.println("\n=== Adapter ===");
         com.patterns.structural.adapter.Main.main(args);
-        System.out.println("\n=== Decorator ===");
-        com.patterns.structural.decorator.Main.main(args);
         System.out.println("\n=== Facade ===");
         com.patterns.structural.facade.Main.main(args);
+        System.out.println("\n=== Decorator ===");
+        com.patterns.structural.decorator.Main.main(args);
 
+        System.out.println("\n=== Strategy ===");
+        com.patterns.behavior.strategy.Main.main(args);
+        System.out.println("\n=== Observer ===");
+        com.patterns.behavior.observer.Main.main(args);
         System.out.println("\n=== Iterator ===");
         com.patterns.behavior.iterator.Main.main(args);
         System.out.println("\n=== Mediator ===");
         com.patterns.behavior.mediator.Main.main(args);
-        System.out.println("\n=== Observer ===");
-        com.patterns.behavior.observer.Main.main(args);
         System.out.println("\n=== State ===");
         com.patterns.behavior.state.Main.main(args);
-        System.out.println("\n=== Strategy ===");
-        com.patterns.behavior.strategy.Main.main(args);
         System.out.println("\n=== Visitor ===");
         com.patterns.behavior.visitor.Main.main(args);
     }

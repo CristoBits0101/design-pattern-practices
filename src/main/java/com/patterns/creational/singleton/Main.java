@@ -1,40 +1,24 @@
 package com.patterns.creational.singleton;
 
-import com.patterns.creational.singleton.models.Singleton;
-
+// Problema: proporcionar acceso a una única instancia de una clase.
+// Idea: la clase crea su instancia y evita que el cliente invoque new.
+// Observa: dos llamadas a getInstance() devuelven el mismo objeto.
 public class Main {
     public static void main(String[] args) {
+        Settings first = Settings.getInstance();
+        Settings second = Settings.getInstance();
+        System.out.println("Misma instancia: " + (first == second));
+    }
+}
 
-        /**
-         * Singleton instance 1
-         */
+final class Settings {
+    // La inicialización de la clase es segura entre hilos.
+    private static final Settings INSTANCE = new Settings();
 
-        // Step 1.1: Create a Singleton instance
-        Singleton singleton = Singleton.getInstance();
+    private Settings() {
+    }
 
-        // Step 1.2: Set the counter value
-        singleton.setContador(5);
-
-        // Step 1.3: Get the counter value
-        System.out.println("Singleton Counter: " + singleton.getContador());
-
-        // Step 1.4: Display Singleton instance information
-        System.out.println("Singleton Instance: " + singleton);
-
-        /**
-         * Singleton instance 2
-         */
-
-        // Obtiene otra referencia a la misma instancia.
-        Singleton singleton2 = Singleton.getInstance();
-
-        // Step 2.2: Get the counter value
-        System.out.println("Singleton2 Counter: " + singleton2.getContador());
-
-        // Step 2.3: Display Singleton2 instance information
-        System.out.println("Singleton2 Instance: " + singleton2);
-
-        System.out.println("Same instance: " + (singleton == singleton2));
-
+    public static Settings getInstance() {
+        return INSTANCE;
     }
 }

@@ -1,21 +1,54 @@
 package com.patterns.creational.builder;
 
-import com.patterns.creational.builder.models.Vehicle;
-import com.patterns.creational.builder.builders.CarBuilder;
-
+// Problema: construir vehículos eligiendo sus opciones paso a paso.
+// Idea: el builder guarda las opciones y build() crea el resultado.
+// Observa: reutilizar el builder no modifica los vehículos anteriores.
 public class Main {
-
     public static void main(String[] args) {
+        CarBuilder builder = new CarBuilder("Toyota").withColor("rojo");
+        Car first = builder.withDoors(4).build();
+        Car second = builder.withDoors(2).build();
+        System.out.println("Primero: " + first.getBrand() + " / " + first.getDoors() + " puertas / " + first.getColor());
+        System.out.println("Segundo: " + second.getBrand() + " / " + second.getDoors() + " puertas / " + second.getColor());
+    }
+}
 
-        // Step 3.1: Create a new CarBuilder object
-        Vehicle car = new CarBuilder("Toyota")
-                .setDoors(4)
-                .build();
+final class Car {
+    private final String brand;
+    private final int doors;
+    private final String color;
 
-        // Step 3.2: Print the car details
-        System.out.println("Car brand: " + car.getBrand());
-        System.out.println("Car doors: " + car.getDoors());
-
+    Car(String brand, int doors, String color) {
+        this.brand = brand;
+        this.doors = doors;
+        this.color = color;
     }
 
+    public String getBrand() { return brand; }
+    public int getDoors() { return doors; }
+    public String getColor() { return color; }
+}
+
+final class CarBuilder {
+    private final String brand;
+    private int doors = 4;
+    private String color = "blanco";
+
+    public CarBuilder(String brand) {
+        this.brand = brand;
+    }
+
+    public CarBuilder withDoors(int doors) {
+        this.doors = doors;
+        return this; // Devuelve el mismo builder para encadenar pasos.
+    }
+
+    public CarBuilder withColor(String color) {
+        this.color = color;
+        return this;
+    }
+
+    public Car build() {
+        return new Car(brand, doors, color);
+    }
 }

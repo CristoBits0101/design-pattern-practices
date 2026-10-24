@@ -1,26 +1,68 @@
 package com.patterns.behavior.mediator;
 
-import com.patterns.behavior.mediator.mediators.ConcreteMediatorExt;
-import com.patterns.behavior.mediator.services.ConcreteFriendExt;
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * Problema: comunicar usuarios sin que cada uno conozca a los demás.
+ * Idea: una sala coordina la entrega de los mensajes.
+ * Observa: el emisor no recibe su propio mensaje.
+ */
+final class ChatRoom {
+    private final List<User> users = new ArrayList<>();
+
+    void register(User user) {
+        users.add(user);
+    }
+
+    public void send(User sender, String message) {
+        for (User user : users) {
+            if (user != sender) {
+                user.receive(sender.getName() + ": " + message);
+            }
+        }
+    }
+}
+
+final class User {
+    private final String name;
+    private final ChatRoom room;
+    private final List<String> messages = new ArrayList<>();
+
+    public User(String name, ChatRoom room) {
+        this.name = name;
+        this.room = room;
+        room.register(this);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void send(String message) {
+        room.send(this, message);
+    }
+
+    void receive(String message) {
+        messages.add(message);
+    }
+
+    public List<String> getMessages() {
+        return List.copyOf(messages);
+    }
+}
 
 public class Main {
+
     public static void main(String[] args) {
+        ChatRoom room = new ChatRoom();
+        User ana = new User("Ana", room);
+        User luis = new User("Luis", room);
+        User eva = new User("Eva", room);
 
-        // Step 5.1: Instantiate mediator
-        ConcreteMediatorExt concreteMediator = new ConcreteMediatorExt();
-
-        // Step 5.2: Instantiate ConcreteFriend and adds friends
-        ConcreteFriendExt concreteFriend1 = new ConcreteFriendExt("Alice");
-        ConcreteFriendExt concreteFriend2 = new ConcreteFriendExt("Bob");
-        ConcreteFriendExt concreteFriend3 = new ConcreteFriendExt("Charlie");
-
-        // Step 5.2: Register friends to concrete mediator
-        concreteMediator.registerFriend(concreteFriend1);
-        concreteMediator.registerFriend(concreteFriend2);
-        concreteMediator.registerFriend(concreteFriend3);
-
-        // Step 5.3: Send a message from one friend
-        concreteFriend1.sendMessage();
-
+        ana.send("Hola");
+        System.out.println("Ana recibe: " + ana.getMessages());
+        System.out.println("Luis recibe: " + luis.getMessages());
+        System.out.println("Eva recibe: " + eva.getMessages());
     }
 }

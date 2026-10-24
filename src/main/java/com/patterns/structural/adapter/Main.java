@@ -1,43 +1,37 @@
 package com.patterns.structural.adapter;
 
-import com.patterns.structural.adapter.adapters.LedAdapter;
-import com.patterns.structural.adapter.services.PluggableService;
-import com.patterns.structural.adapter.services.implementations.LampServiceImpl;
-import com.patterns.structural.adapter.services.implementations.OvenServiceImpl;
+/*
+ * Problema: el cliente pide turnOn pero el LED recibe connect(voltage).
+ * Idea: un adaptador traduce la llamada sin modificar el LED.
+ * Observa: el cliente utiliza Switchable y el adaptador llama al componente original.
+ */
+interface Switchable {
+    String turnOn();
+}
+
+final class LegacyLed {
+    public String connect(int voltage) {
+        return "LED encendido a " + voltage + " V";
+    }
+}
+
+final class LedAdapter implements Switchable {
+    private final LegacyLed led;
+
+    public LedAdapter(LegacyLed led) {
+        this.led = led;
+    }
+
+    @Override
+    public String turnOn() {
+        return led.connect(5);
+    }
+}
 
 public class Main {
 
     public static void main(String[] args) {
-
-        // Step 4.1: Instantiate the classes
-        OvenServiceImpl ovenService = new OvenServiceImpl();
-        LampServiceImpl lampService = new LampServiceImpl();
-        LedAdapter powerAdapter = new LedAdapter();
-
-        // Step 4.3: Call the methods
-        turnOn(ovenService);
-        turnOn(lampService);
-        turnOn(powerAdapter);
-
-        System.out.println();
-
-        turnOff(ovenService);
-        turnOff(lampService);
-        turnOff(powerAdapter);
-
+        Switchable light = new LedAdapter(new LegacyLed());
+        System.out.println(light.turnOn());
     }
-
-    // Step 4.2: The interface methods get the object references and call them.
-    public static void turnOn(PluggableService pluggableService) {
-        pluggableService.turnOn();
-    }
-
-    public static void turnOff(PluggableService pluggableService) {
-        pluggableService.turnOff();
-    }
-
-    public static boolean isOn(PluggableService pluggableService) {
-        return pluggableService.isOn();
-    }
-
 }

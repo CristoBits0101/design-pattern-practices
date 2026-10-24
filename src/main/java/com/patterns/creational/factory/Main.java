@@ -1,16 +1,44 @@
 package com.patterns.creational.factory;
 
-import com.patterns.creational.factory.factories.PriceFactory;
-import com.patterns.creational.factory.services.PriceService;
-
+// Problema: elegir el tipo de notificación a partir de un dato.
+// Idea: una fábrica centraliza la selección y devuelve el contrato común.
+// Observa: cambia el argumento de create() para obtener otro producto.
 public class Main {
-
     public static void main(String[] args) {
-        // La fábrica elige la clase. El cliente trabaja con la interfaz PriceService.
-        PriceService euroPrice = PriceFactory.create("EUROPE");
-        PriceService dollarPrice = PriceFactory.create("USA");
+        Notification email = NotificationFactory.create("email");
+        Notification sms = NotificationFactory.create("sms");
+        System.out.println(email.send("Pedido confirmado."));
+        System.out.println(sms.send("Pedido enviado."));
+    }
+}
 
-        System.out.println("Price in EUROPE: " + euroPrice.getPrice());
-        System.out.println("Price in USA: " + dollarPrice.getPrice());
+interface Notification {
+    String send(String message);
+}
+
+final class EmailNotification implements Notification {
+    @Override
+    public String send(String message) {
+        return "EMAIL: " + message;
+    }
+}
+
+final class SmsNotification implements Notification {
+    @Override
+    public String send(String message) {
+        return "SMS: " + message;
+    }
+}
+
+final class NotificationFactory {
+    private NotificationFactory() {
+    }
+
+    public static Notification create(String channel) {
+        return switch (channel) {
+            case "email" -> new EmailNotification();
+            case "sms" -> new SmsNotification();
+            default -> throw new IllegalArgumentException("Canal desconocido: " + channel);
+        };
     }
 }

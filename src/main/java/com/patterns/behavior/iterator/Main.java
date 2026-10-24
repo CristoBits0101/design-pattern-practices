@@ -1,30 +1,58 @@
 package com.patterns.behavior.iterator;
 
-import com.patterns.behavior.iterator.models.User;
-import com.patterns.behavior.iterator.services.UsersImpl;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
+
+/*
+ * Problema: recorrer los libros sin conocer cómo se almacenan.
+ * Idea: la colección entrega un iterador que controla su posición.
+ * Observa: cada iterador comienza su propio recorrido.
+ */
+final class BookShelf implements Iterable<String> {
+    private final List<String> books;
+
+    public BookShelf(List<String> books) {
+        this.books = List.copyOf(books);
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return new BookIterator(books);
+    }
+}
+
+final class BookIterator implements Iterator<String> {
+    private final List<String> books;
+    private int position;
+
+    BookIterator(List<String> books) {
+        this.books = books;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return position < books.size();
+    }
+
+    @Override
+    public String next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException("No quedan libros.");
+        }
+        return books.get(position++);
+    }
+}
 
 public class Main {
+
     public static void main(String[] args) {
+        BookShelf shelf = new BookShelf(List.of("Java", "SQL"));
+        Iterator<String> iterator = shelf.iterator();
 
-        // Step 4.1: Import the services
-        UsersImpl user = new UsersImpl();
-
-        // Step 4.2: Create new users
-        user.create(new User("John Doe1", 18));
-        user.create(new User("John Doe2", 18));
-        user.create(new User("John Doe3", 18));
-
-        // Step 4.3: Iterate over the users
-        while (user.hasMore()) {
-            // Step 4.4: Get the next user
-            User u = user.next();
-            // Step 4.5: Print the user
-            System.out.println(u);
-            System.out.println(u.getName() + " - " + u.getAge());
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
-
-        // Step 4.6: Reset the iterator
-        user.reset();
-
+        System.out.println("Nuevo recorrido: " + shelf.iterator().next());
     }
 }
