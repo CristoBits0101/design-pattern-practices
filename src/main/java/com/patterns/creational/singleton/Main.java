@@ -25,7 +25,7 @@ public class Main {
          * Singleton instance 2
          */
 
-        // Step 2.1: Create another Singleton instance
+        // Obtiene otra referencia a la misma instancia.
         Singleton singleton2 = Singleton.getInstance();
 
         // Step 2.2: Get the counter value
@@ -33,6 +33,8 @@ public class Main {
 
         // Step 2.3: Display Singleton2 instance information
         System.out.println("Singleton2 Instance: " + singleton2);
+
+        System.out.println("Same instance: " + (singleton == singleton2));
 
     }
 }

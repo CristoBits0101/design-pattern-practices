@@ -1,45 +1,48 @@
 package com.patterns.behavior.strategy.services;
 
-import java.io.PrintStream;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.File;
+import java.util.Objects;
 
-/**
- * La función de esta clase es almacenar los usuarios y devolverlos
- */
-public class UsuariosFicheroImpl implements Usuarios{
+// Guarda usuarios sin borrar los de ejecuciones anteriores.
+public class UsuariosFicheroImpl implements Usuarios {
 
-    private String ficheroUsuarios = "usuarios.txt";
-    private PrintStream fichero;
+    private final Path usersFile;
 
     public UsuariosFicheroImpl() {
-        try {
-            fichero = new PrintStream(ficheroUsuarios);
-        } catch (Exception e) {
-            System.err.println("Error al crear el usuario: " + e.getMessage());
-        }
+        this(Path.of("usuarios.txt"));
+    }
+
+    public UsuariosFicheroImpl(Path usersFile) {
+        this.usersFile = Objects.requireNonNull(usersFile, "El archivo es obligatorio.");
     }
 
     @Override
     public void crear(String nombre) {
-        fichero.println(nombre);
+        try {
+            // Files abre y cierra el recurso. APPEND conserva el contenido existente.
+            Files.writeString(usersFile, nombre + System.lineSeparator(), StandardCharsets.UTF_8,
+                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (IOException exception) {
+            throw new UncheckedIOException("No se pudo guardar el usuario.", exception);
+        }
     }
 
     @Override
     public ArrayList<String> listar() {
-        ArrayList<String> usuarios = new ArrayList<>();
         try {
-           Scanner scanner = new Scanner(new File(ficheroUsuarios));
-            while (scanner.hasNextLine()) {
-                String nombre = scanner.nextLine();
-                usuarios.add(nombre);
-            }
-            scanner.close();
-        } catch (Exception e) {
-            System.err.println("Error al listar los usuarios: " + e.getMessage());
+            return new ArrayList<>(Files.readAllLines(usersFile, StandardCharsets.UTF_8));
+        } catch (NoSuchFileException exception) {
+            // Antes de guardar el primer usuario, la colección está vacía.
+            return new ArrayList<>();
+        } catch (IOException exception) {
+            throw new UncheckedIOException("No se pudieron leer los usuarios.", exception);
         }
-        return usuarios;
     }
-
 }

@@ -1,6 +1,7 @@
 package com.patterns.behavior.state.services;
 
 import com.patterns.behavior.state.models.Phone;
+import java.util.Objects;
 
 /**
  * The phone model get state from the StateService class.
@@ -16,7 +17,7 @@ public abstract class StateService {
      */
 
     // Step 1.2: Create a reference to the Phone object to work
-    public Phone phone;
+    protected final Phone phone;
 
     /**
      * Constructors
@@ -24,7 +25,7 @@ public abstract class StateService {
 
     // Step 1.3: Create a constructor that takes a Phone object
     public StateService(Phone phone) {
-        this.phone = phone;
+        this.phone = Objects.requireNonNull(phone, "Phone must not be null");
     }
 
     /**

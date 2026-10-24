@@ -1,6 +1,8 @@
 package com.patterns.behavior.state.models;
 
 import com.patterns.behavior.state.services.StateService;
+import com.patterns.behavior.state.services.implementations.LockedStatusImpl;
+import java.util.Objects;
 
 // Step 2.1: Create the Phone class
 public class Phone {
@@ -16,19 +18,18 @@ public class Phone {
      * Constructors
      */
 
-    // Step 2.3: Create a constructor that receives a state
-    public Phone(StateService state) {
-        this.state = state;
+    // El estado inicial recibe el teléfono al que pertenece. No necesita un null provisional.
+    public Phone() {
+        this.state = new LockedStatusImpl(this);
     }
 
     /**
      * Methods
      */
 
-    // Step 2.4: Create a method to set the state
-    // Call to the method of the current object instead of the state
+    // Cambia el objeto que decide cómo responde el teléfono.
     public void setState(StateService state) {
-        this.state = state;
+        this.state = Objects.requireNonNull(state, "State must not be null");
     }
 
     // Step 2.5: Create methods to delegate behavior

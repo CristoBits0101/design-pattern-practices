@@ -1,42 +1,17 @@
 package com.patterns.behavior.strategy;
 
-import java.util.ArrayList;
-
-import com.patterns.behavior.strategy.services.Usuarios;
-import com.patterns.behavior.strategy.services.UsuariosFicheroImpl;
-import com.patterns.behavior.strategy.services.UsuariosMemoriaImpl;
+import com.patterns.behavior.strategy.models.PaymentContext;
+import com.patterns.behavior.strategy.services.implementations.CreditCardPayment;
+import com.patterns.behavior.strategy.services.implementations.PayPalPayment;
 
 public class Main {
 
     public static void main(String[] args) {
+        PaymentContext context = new PaymentContext(new CreditCardPayment());
+        context.executePayment(100.0);
 
-        Usuarios usuarios;
-        boolean memoria = true;
-
-        usuarios = memoria ? new UsuariosMemoriaImpl() : new UsuariosFicheroImpl();
-
-        crear(usuarios, "Juan");
-        crear(usuarios, "Maria");
-        crear(usuarios, "Pedro");
-
-        for (String usuario : usuarios.listar()) {
-            System.out.println("Usuario: " + usuario);
-        }
-        
+        // Cambia el algoritmo utilizado por el mismo contexto.
+        context.setStrategy(new PayPalPayment());
+        context.executePayment(50.0);
     }
-
-    /**
-     * La interface recibe la instancia de la clase que la implementa
-     * 
-     * @param usuario
-     * @param nombre
-     */
-    public static void crear(Usuarios usuario, String nombre) {
-        usuario.crear(nombre);
-    }
-
-    public static ArrayList<String> listar(Usuarios usuarios) {
-        return usuarios.listar();
-    }
-
 }
