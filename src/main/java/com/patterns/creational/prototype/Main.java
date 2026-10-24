@@ -1,8 +1,5 @@
 package com.patterns.creational.prototype;
 
-// Problema: crear un documento a partir de otro ya configurado.
-// Idea: el objeto ofrece copy() para copiar su estado en otro objeto.
-// Observa: cambiar el título de la copia conserva el título original.
 public class Main {
     public static void main(String[] args) {
         Document original = new Document("Plantilla", "Contenido inicial");
@@ -23,7 +20,7 @@ final class Document {
     }
 
     public Document copy() {
-        // Los String son inmutables. Sus referencias pueden compartirse.
+
         return new Document(title, body);
     }
 

@@ -1,8 +1,5 @@
 package com.patterns.creational.builder;
 
-// Problema: construir vehículos eligiendo sus opciones paso a paso.
-// Idea: el builder guarda las opciones y build() crea el resultado.
-// Observa: reutilizar el builder no modifica los vehículos anteriores.
 public class Main {
     public static void main(String[] args) {
         CarBuilder builder = new CarBuilder("Toyota").withColor("rojo");
@@ -40,7 +37,7 @@ final class CarBuilder {
 
     public CarBuilder withDoors(int doors) {
         this.doors = doors;
-        return this; // Devuelve el mismo builder para encadenar pasos.
+        return this;
     }
 
     public CarBuilder withColor(String color) {

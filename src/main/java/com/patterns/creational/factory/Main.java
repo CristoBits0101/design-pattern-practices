@@ -1,8 +1,5 @@
 package com.patterns.creational.factory;
 
-// Problema: elegir el tipo de notificación a partir de un dato.
-// Idea: una fábrica centraliza la selección y devuelve el contrato común.
-// Observa: cambia el argumento de create() para obtener otro producto.
 public class Main {
     public static void main(String[] args) {
         Notification email = NotificationFactory.create("email");

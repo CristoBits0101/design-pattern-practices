@@ -1,10 +1,5 @@
 package com.patterns.structural.facade;
 
-/*
- * Problema: iniciar una película requiere coordinar la televisión y el sonido.
- * Idea: una fachada reúne esas operaciones en watchMovie().
- * Observa: el cliente hace una llamada y la fachada utiliza los dos componentes.
- */
 final class Television {
     public String turnOn() {
         return "Televisión encendida";

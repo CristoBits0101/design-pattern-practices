@@ -3,11 +3,6 @@ package com.patterns.behavior.mediator;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Problema: comunicar usuarios sin que cada uno conozca a los demás.
- * Idea: una sala coordina la entrega de los mensajes.
- * Observa: el emisor no recibe su propio mensaje.
- */
 final class ChatRoom {
     private final List<User> users = new ArrayList<>();
 

@@ -1,6 +1,5 @@
 package com.patterns;
 
-/** Ejecuta un ejemplo de cada uno de los 14 patrones del catálogo. */
 public class Main {
 
     public static void main(String[] args) throws Exception {

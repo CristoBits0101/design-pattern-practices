@@ -1,10 +1,5 @@
 package com.patterns.behavior.visitor;
 
-/*
- * Problema: añadir operaciones sobre distintas figuras sin editar sus clases.
- * Idea: cada figura acepta un visitante que conoce su tipo concreto.
- * Observa: área y perímetro se calculan sobre las mismas figuras.
- */
 interface Shape {
     double accept(ShapeVisitor visitor);
 }
@@ -27,7 +22,7 @@ final class Circle implements Shape {
 
     @Override
     public double accept(ShapeVisitor visitor) {
-        // Aquí this tiene tipo Circle y selecciona visit(Circle).
+
         return visitor.visit(this);
     }
 }

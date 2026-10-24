@@ -1,10 +1,5 @@
 package com.patterns.structural.decorator;
 
-/*
- * Problema: combinar extras sin crear una clase de café para cada combinación.
- * Idea: cada decorador envuelve un Coffee y añade su parte al resultado.
- * Observa: leche y azúcar se acumulan sin cambiar el café original.
- */
 interface Coffee {
     String description();
     int priceInCents();

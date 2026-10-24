@@ -1,10 +1,5 @@
 package com.patterns.structural.adapter;
 
-/*
- * Problema: el cliente pide turnOn pero el LED recibe connect(voltage).
- * Idea: un adaptador traduce la llamada sin modificar el LED.
- * Observa: el cliente utiliza Switchable y el adaptador llama al componente original.
- */
 interface Switchable {
     String turnOn();
 }

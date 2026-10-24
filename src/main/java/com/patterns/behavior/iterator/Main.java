@@ -4,11 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-/*
- * Problema: recorrer los libros sin conocer cómo se almacenan.
- * Idea: la colección entrega un iterador que controla su posición.
- * Observa: cada iterador comienza su propio recorrido.
- */
 final class BookShelf implements Iterable<String> {
     private final List<String> books;
 

@@ -2,11 +2,6 @@ package com.patterns.behavior.strategy;
 
 import java.util.Objects;
 
-/*
- * Problema: cambiar el método de pago sin modificar el código que lo utiliza.
- * Idea: el contexto delega el pago en una estrategia intercambiable.
- * Observa: el mismo contexto cambia de tarjeta a PayPal durante la ejecución.
- */
 interface PaymentStrategy {
     String pay(double amount);
 }

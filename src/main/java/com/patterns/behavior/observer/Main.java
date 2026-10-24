@@ -3,11 +3,6 @@ package com.patterns.behavior.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Problema: avisar a los lectores interesados cuando se publica una noticia.
- * Idea: la agencia mantiene suscriptores con un contrato común.
- * Observa: un lector que se da de baja deja de recibir novedades.
- */
 interface Subscriber {
     void update(String news);
 }

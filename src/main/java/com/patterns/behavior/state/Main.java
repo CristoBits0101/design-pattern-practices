@@ -1,10 +1,5 @@
 package com.patterns.behavior.state;
 
-/*
- * Problema: una misma acción debe responder según el estado del teléfono.
- * Idea: el teléfono delega la acción en su estado actual.
- * Observa: cada estado decide la respuesta y la siguiente transición.
- */
 interface PhoneState {
     String pressButton(Phone phone);
 }
